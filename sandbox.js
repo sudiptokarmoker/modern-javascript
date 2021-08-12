@@ -45,5 +45,7 @@ let random = ['apple', 'orange', 10, 'bananna'];
 // array method
 //let result = ninja.join('-'); // shaun-ryn-chun-li
 //let result = ninja.indexOf('chun-li'); // 2
-let result = ninja.concat(['crystal', 'earth']); //(5) ["shaun", "ryn", "chun-li", "crystal", "earth"]
-console.log(result);
+//let result = ninja.concat(['crystal', 'earth']); //(5) ["shaun", "ryn", "chun-li", "crystal", "earth"]
+let result = ninja.push('crystal'); // (4) ["shaun", "ryn", "chun-li", "crystal"]
+let popItem = ninja.pop();
+console.log(popItem);
