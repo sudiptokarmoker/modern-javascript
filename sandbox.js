@@ -138,13 +138,42 @@ if (age > 20) {
 // switch statement
 // variable and block scope
 
-const calArea = function(radious){
-  return 3.14 * radious**2;
+// const calArea = function(radious){
+//   return 3.14 * radious**2;
+// }
+
+// const calArea = (radious) => {
+//   return 3.14 * radious**2;
+// }
+
+// const calArea = radious => 3.14 * radious**2;
+
+// const area = calArea(5);
+// console.log('area is:', area);
+
+// topics : call back function
+// const myFunc = (callbackFunc) => {
+//   let value = 50;
+//   callbackFunc(value);
+// };
+
+// myFunc(function (value) {
+//   console.log(value);
+// });
+
+function myDisplayer(sum) {
+  //document.getElementById("demo").innerHTML = some;
+  console.log("total sum : " + sum);
 }
 
-const calArea = (radious) => {
-  return 3.14 * radious**2;
+function callBackFunctionTwo(value) {
+  console.log("Value from call back function two : " + value);
 }
 
-const area = calArea(5);
-console.log('area is:', area);
+function myCalculator(num1, num2, myCallback) {
+  let sum = num1 + num2;
+  myCallback(sum);
+}
+
+myCalculator(5, 5, myDisplayer);
+myCalculator(6, 6, callBackFunctionTwo);
