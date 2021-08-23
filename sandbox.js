@@ -175,5 +175,41 @@ function myCalculator(num1, num2, myCallback) {
   myCallback(sum);
 }
 
-myCalculator(5, 5, myDisplayer);
-myCalculator(6, 6, callBackFunctionTwo);
+// myCalculator(5, 5, myDisplayer);
+// myCalculator(6, 6, callBackFunctionTwo);
+
+let user = {
+  name: "Sudipto",
+  age: 30,
+  email: "sudipto karmoker",
+  location: "Dhaka",
+  country: "Bangladesh",
+  blogs: ["blog post 1", "blog post 2"],
+  login: function () {
+    console.log("from login function");
+  },
+  logout: function () {
+    console.log("from logout function");
+  },
+  logBlogs: function () {
+    //return this;
+    this.blogs.forEach((blog) => {
+      console.log(blog);
+    });
+  },
+  logLocation: function () {
+    return this.location;
+  },
+  logTest(){
+    console.log(this);
+  }
+  // logTest: (e) => {
+  //   console.log(e);
+  // }
+};
+
+//user.logBlogs();
+//user.logTest(user);
+
+// console.log(user.logLocation());
+// console.log(typeof user);
