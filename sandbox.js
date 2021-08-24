@@ -184,7 +184,11 @@ let user = {
   email: "sudipto karmoker",
   location: "Dhaka",
   country: "Bangladesh",
-  blogs: ["blog post 1", "blog post 2"],
+  //blogs: ["blog post 1", "blog post 2"],
+  blogs: [
+    { title: "blog post 1", likes: 40 },
+    { title: "blog post 2", likes: 30 },
+  ],
   login: function () {
     console.log("from login function");
   },
@@ -194,15 +198,15 @@ let user = {
   logBlogs: function () {
     //return this;
     this.blogs.forEach((blog) => {
-      console.log(blog);
+      console.log(blog.title);
     });
   },
   logLocation: function () {
     return this.location;
   },
-  logTest(){
+  logTest() {
     console.log(this);
-  }
+  },
   // logTest: (e) => {
   //   console.log(e);
   // }
@@ -213,3 +217,43 @@ let user = {
 
 // console.log(user.logLocation());
 // console.log(typeof user);
+
+// MATH object
+// console.log(Math.PI);
+// let area = 7.7;
+// console.log(Math.round(area));
+// console.log(Math.floor(area));
+// console.log(Math.ceil(area));
+// console.log(Math.trunc(area));
+// console.log(Math.random());
+
+// let scoreOne = 50;
+// let scoreTwo = scoreOne;
+// console.log(`score one : ${scoreOne} , and scoreTwo ${scoreTwo}`);
+// scoreOne = 100;
+// console.log(`score one : ${scoreOne} , and scoreTwo ${scoreTwo}`);
+
+const userOne = { name: "abc", age: 40 };
+console.log(typeof userOne);
+const userTwo = userOne;
+console.log(userOne, userTwo);
+userTwo.name = "cdef";
+userOne.age = 80;
+console.log(userOne, userTwo);
+
+const para = document.querySelector("p");
+console.log(para);
+
+const getError = document.querySelectorAll(".error");
+console.log(getError);
+
+getError.forEach((error) => {
+  console.log(error.innerHTML);
+});
+
+getError[0].innerHTML += " this is from dynamic html added";
+console.log(getError[0].innerHTML);
+
+const link = document.querySelector('a');
+console.log(link.getAttribute('href'));
+console.log(link.getAttribute('class'));
