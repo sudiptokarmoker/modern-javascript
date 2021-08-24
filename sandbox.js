@@ -257,3 +257,12 @@ console.log(getError[0].innerHTML);
 const link = document.querySelector('a');
 console.log(link.getAttribute('href'));
 console.log(link.getAttribute('class'));
+
+link.setAttribute('class', 'success');
+
+link.style.fontSize = '40px';
+link.style.marginTop = '20px';
+
+link.classList.add('class1');
+link.classList.add('class2');
+link.classList.remove('class1');
